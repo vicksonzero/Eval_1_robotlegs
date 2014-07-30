@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="Eval_1_robotlegs">
+    <configurations>
+      <configuration name="Eval_1_robotlegs" target-platform="Mobile" main-class="main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/Eval_1_robotlegs">
+        <dependencies target-player="13.0">
+          <entries>
+            <entry library-name="robotlegs-framework-v2.2.1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="as3_signals-0-9-beta" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="rl2ext_signal_command_map-1-0-0-b1" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="4.12.1_13.0" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android enabled="true" package-file-name="Main" />
+        <packaging-ios package-file-name="Main" />
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="4.12.1_13.0" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="robotlegs-framework-v2.2.1" level="project" />
+    <orderEntry type="library" exported="" name="as3_signals-0-9-beta" level="project" />
+    <orderEntry type="library" exported="" name="rl2ext_signal_command_map-1-0-0-b1" level="project" />
+  </component>
+</module>
+

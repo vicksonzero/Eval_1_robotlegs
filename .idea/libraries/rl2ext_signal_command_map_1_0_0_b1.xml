@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="rl2ext_signal_command_map-1-0-0-b1" type="flex">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/libs/rl2ext_signal_command_map-1-0-0-b1.swc!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
