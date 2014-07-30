@@ -22,12 +22,12 @@
 
         import views.VBody;
 
-        [Inject]
-        public var sig_start_app:SigStartApp;
+        //[Inject]
+        //public var sig_start_app:SigStartApp;
 
         public function h_added_to_stage():void {
 
-            sig_start_app.add(this.switchView);
+           // sig_start_app.add(this.switchView);
         }
 
         public function switchView():void {

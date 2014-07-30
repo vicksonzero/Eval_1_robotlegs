@@ -4,6 +4,8 @@
 package configs {
 import commands.CmdStartApp;
 
+import mediators.MedApp;
+
 import mediators.MedWelcome;
 
 import robotlegs.bender.extensions.contextView.ContextView;
@@ -40,12 +42,12 @@ public class AppConfig implements IConfig {
         // Create a UserProfileMediator for each UserProfileView
         // that lands inside of the Context View
         mediatorMap.map(VWelcome).toMediator(MedWelcome);
-        //mediatorMap.map(main).toMediator(MedWelcome);
+        mediatorMap.map(main).toMediator(MedApp);
 
 
         // Execute UserSignInCommand when UserEvent.SIGN_IN
-        // is dispatched on the context's Event Dispatcherwww.win2.c
-        commandMap.map(SigStartApp).toCommand(CmdStartApp);
+        // is dispatched on the context's Event Dispatcher www.win2.c
+        //commandMap.map(SigStartApp).toCommand(CmdStartApp);
 
 
         // The "view" property is a DisplayObjectContainer reference.
