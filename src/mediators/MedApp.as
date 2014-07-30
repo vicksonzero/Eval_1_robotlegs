@@ -25,11 +25,13 @@ public class MedApp extends Mediator{
      */
     override public function initialize ():void
     {
+        trace("MedApp initialize")
         this._sig_start_app.add(this.switch_view);
 
     }
 
     public function switch_view():void {
+        trace("MedApp received sig start app");
         this._view.switchView();
     }
 }

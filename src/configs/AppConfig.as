@@ -16,6 +16,8 @@ import robotlegs.bender.framework.api.IInjector;
 
 import signals.SigStartApp;
 
+import spark.components.ViewNavigator;
+
 import views.VWelcome;
 
 public class AppConfig implements IConfig {
@@ -31,8 +33,6 @@ public class AppConfig implements IConfig {
     [Inject]
     public var contextView:ContextView;
 
-    [Inject]
-    public var sig_start_app:SigStartApp;
 
     public function configure():void {
       /*
@@ -41,10 +41,11 @@ public class AppConfig implements IConfig {
 */
         // Create a UserProfileMediator for each UserProfileView
         // that lands inside of the Context View
-        mediatorMap.map(VWelcome).toMediator(MedWelcome);
         mediatorMap.map(main).toMediator(MedApp);
+        mediatorMap.map(VWelcome).toMediator(MedWelcome);
 
 
+        injector.map(SigStartApp).asSingleton();
         // Execute UserSignInCommand when UserEvent.SIGN_IN
         // is dispatched on the context's Event Dispatcher www.win2.c
         //commandMap.map(SigStartApp).toCommand(CmdStartApp);
