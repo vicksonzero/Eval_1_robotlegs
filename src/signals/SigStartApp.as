@@ -7,5 +7,9 @@ import org.osflash.signals.Signal;
 public class SigStartApp extends Signal {
     public function SigStartApp(){
     }
+    override public function dispatch(... rest):void{
+        trace("sigstartapp dispatched");
+        super.dispatch(rest);
+    }
 }
 }

@@ -35,27 +35,13 @@ public class AppConfig implements IConfig {
 
 
     public function configure():void {
-      /*
-        // Map UserModel as a context enforced singleton
-        injector.map(UserModel).asSingleton();
-*/
-        // Create a UserProfileMediator for each UserProfileView
-        // that lands inside of the Context View
-        mediatorMap.map(main).toMediator(MedApp);
-        mediatorMap.map(VWelcome).toMediator(MedWelcome);
-
-
+        //injector.map(UserModel).asSingleton();
         injector.map(SigStartApp).asSingleton();
-        // Execute UserSignInCommand when UserEvent.SIGN_IN
-        // is dispatched on the context's Event Dispatcher www.win2.c
+
+        mediatorMap.map(VWelcome).toMediator(MedWelcome);
         //commandMap.map(SigStartApp).toCommand(CmdStartApp);
-
-
-        // The "view" property is a DisplayObjectContainer reference.
-        // If this was a Flex application we would need to cast it
-        // as an IVisualElementContainer and call addElement().
         //ViewNavigator(this.contextView.view).popToFirstView();
-
+        mediatorMap.map(main).toMediator(MedApp);
     }
 }
 }

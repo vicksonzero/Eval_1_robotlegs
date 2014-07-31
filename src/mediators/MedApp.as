@@ -18,7 +18,7 @@ public class MedApp extends Mediator{
     public var _sig_start_app:SigStartApp;
 
     public function MedApp() {
-
+        trace("Medapp created");
     }
     /**
      * Initialize

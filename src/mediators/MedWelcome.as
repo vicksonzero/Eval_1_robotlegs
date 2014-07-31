@@ -18,7 +18,7 @@ public class MedWelcome extends Mediator{
     public var _sig_start_app:SigStartApp;
 
     public function MedWelcome() {
-
+        trace("medwelcome created");
     }
     /**
      * Initialize
@@ -42,7 +42,6 @@ public class MedWelcome extends Mediator{
     public function h_start_app():void {
         // tell app to switch to next view
         trace("dispatch sig start app");
-        trace(this._sig_start_app);
         this._sig_start_app.dispatch();
     }
 }
