@@ -5,7 +5,7 @@
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
                xmlns:configs="configs.*" xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
                xmlns:signalcommandmap="robotlegs.bender.extensions.signalCommandMap.*"
-               xmlns:rl2="http://ns.robotlegs.org/flex/rl2"
+               xmlns:rl2="http://ns.robotlegs.org/flex/rl2" xmlns:root="*"
                addedToStage="this.h_added_to_stage()">
     <fx:Style source="styles/SApp.css" />
     <fx:Declarations>
@@ -30,16 +30,7 @@
             //this._sig_start_app.add(this.switchView);
         }
 
-        public function switchView():void {
-            trace("changing view...");
-            this._nav.pushView(VBody);
-        }
         ]]>
     </fx:Script>
-    <s:ViewNavigator
-            id="_nav"
-            width="100%" height="100%"
-            opaqueBackground="#0000AA"
-            firstView="views.VWelcome">
-    </s:ViewNavigator>
+    <root:AppVN id="_nav"/>
 </s:Application>

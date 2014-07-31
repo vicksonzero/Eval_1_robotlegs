@@ -12,7 +12,7 @@ public class MedApp extends Mediator{
 
     // view
     [Inject]
-    public var _view:main;
+    public var _view:AppVN;
 
     [Inject]
     public var _sig_start_app:SigStartApp;

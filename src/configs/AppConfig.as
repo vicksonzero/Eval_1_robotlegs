@@ -36,12 +36,12 @@ public class AppConfig implements IConfig {
 
     public function configure():void {
         //injector.map(UserModel).asSingleton();
+        mediatorMap.map(AppVN).toMediator(MedApp);
         injector.map(SigStartApp).asSingleton();
 
         mediatorMap.map(VWelcome).toMediator(MedWelcome);
         //commandMap.map(SigStartApp).toCommand(CmdStartApp);
         //ViewNavigator(this.contextView.view).popToFirstView();
-        mediatorMap.map(main).toMediator(MedApp);
     }
 }
 }

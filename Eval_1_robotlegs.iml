@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="Eval_1_robotlegs">
     <configurations>
-      <configuration name="Eval_1_robotlegs" target-platform="Mobile" main-class="main" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/Eval_1_robotlegs">
+      <configuration name="Eval_1_robotlegs" target-platform="Mobile" main-class="App" output-file="Main.swf" output-folder="$MODULE_DIR$/out/production/Eval_1_robotlegs">
         <dependencies target-player="13.0">
           <entries>
             <entry library-name="robotlegs-framework-v2.2.1" library-level="project">
