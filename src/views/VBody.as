@@ -2,37 +2,46 @@
  * Created by Lenovo on 21/7/2014.
  */
 package views {
-import flash.events.MouseEvent;
+import flash.events.Event;
+
+import mx.collections.ArrayCollection;
+
+import mx.events.FlexEvent;
 
 import org.osflash.signals.Signal;
 
-import spark.components.Button;
-import spark.components.SkinnableContainer;
+import signals.SigVBodyLoaded;
+
+import spark.components.List;
 import spark.components.View;
 
 public class VBody extends View {
 
     //  skin parts
     [SkinPart(required="true")]
-    public var start_button:Button;
+    public var name_list:List;
 
-    // signals
-    private var _sig_start_app_button_pressed:Signal;
+    private var _sig_loaded:Signal;
+
+    private var _name_list_ac:ArrayCollection;
+
 
     public function VBody() {
-        // initial signal
-        this._sig_start_app_button_pressed = new Signal();
-        trace("VWelcome started");
+        trace("VBody created");
+        this._sig_loaded = new Signal();
+        this.addEventListener(FlexEvent.CREATION_COMPLETE, this.h_creation_complete);
+    }
 
+    public function h_creation_complete(p_event:Event):void {
+        trace("VBody cc");
+        this._sig_loaded.dispatch();
     }
     /**
      * Destructor
      */
     public function destroy ():void
     {
-        this._sig_start_app_button_pressed.removeAll ();
 
-        this.start_button.removeEventListener (MouseEvent.CLICK, h_s_button_click);
     }
 
 
@@ -41,18 +50,16 @@ public class VBody extends View {
      */
     override protected function childrenCreated():void {
         super.childrenCreated();
-        this.start_button.addEventListener(MouseEvent.CLICK, h_s_button_click);
     }
 
-    private function h_s_button_click(event:MouseEvent):void {
-        trace("View knows start button is clicked");
-        this._sig_start_app_button_pressed.dispatch();
+    public function set name_list_ac(value:ArrayCollection):void {
+        _name_list_ac = value;
+        this.name_list.dataProvider = this._name_list_ac;
     }
 
-    public function get sig_start_app_button_pressed():Signal {
-        return (this._sig_start_app_button_pressed);
+    public function get sig_loaded():Signal {
+        return _sig_loaded;
     }
-
 }
 
 }

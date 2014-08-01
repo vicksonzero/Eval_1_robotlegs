@@ -8,22 +8,18 @@
         top="0" bottom="0" left="0" right="0"
         >
     <fx:Metadata>
-        [HostComponent("views.VWelcome")]
+        [HostComponent("views.VBody")]
     </fx:Metadata>
 
     <s:states>
         <s:State name="normal" />
         <s:State name="disabled" />
     </s:states>
-    <s:Group top="0" bottom="0" left="0" right="0">
-        <s:Button
-                id="start_button"
-                horizontalCenter="0" verticalCenter="0"
-                height="50"
-                label="start"
-                creationComplete="trace('sButton created')"
-                />
 
-    </s:Group>
+    <s:List id="name_list"
+            left="0" right="0" top="0" bottom="0"
+            >
+
+    </s:List>
 
 </s:Skin>
