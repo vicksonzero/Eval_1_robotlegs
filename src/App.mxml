@@ -3,33 +3,36 @@
   Created by Lenovo on 22/7/2014.
 -->
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
-               xmlns:configs="configs.*" xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
+               xmlns:mvcs="robotlegs.bender.bundles.mvcs.*"
                xmlns:signalcommandmap="robotlegs.bender.extensions.signalCommandMap.*"
                xmlns:rl2="http://ns.robotlegs.org/flex/rl2" xmlns:root="*"
+               xmlns:welcome="welcome.configs.*" xmlns:body="body.configs.*" xmlns:bodyB="bodyB.configs.*"
                addedToStage="this.h_added_to_stage()">
-    <fx:Style source="styles/SApp.css" />
+    <fx:Style source="SApp.css" />
     <fx:Declarations>
         <rl2:ContextBuilder contextView="{_nav}">
             <mvcs:MVCSBundle/>
             <signalcommandmap:SignalCommandMapExtension />
-            <configs:AppConfig/>
+            <root:AppConfig/>
+            <welcome:WelcomeConfig/>
+            <body:BodyConfig/>
+            <bodyB:BodyBConfig/>
         </rl2:ContextBuilder>
 
     </fx:Declarations>
     <fx:Script>
     <![CDATA[
-        import signals.SigStartApp;
+        import welcome.signals.SigLoadBody;
 
-        import views.VBody;
+        import body.views.VBody;
 
         [Inject]
-        public var _sig_start_app:SigStartApp;
+        public var _sig_start_app:SigLoadBody;
 
         public function h_added_to_stage():void {
 
             //this._sig_start_app.add(this.switchView);
         }
-
         ]]>
     </fx:Script>
     <root:AppVN id="_nav"/>

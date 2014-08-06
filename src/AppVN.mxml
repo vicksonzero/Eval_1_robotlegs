@@ -4,13 +4,20 @@
 -->
 <s:ViewNavigator xmlns:fx="http://ns.adobe.com/mxml/2009" xmlns:s="library://ns.adobe.com/flex/spark"
             width="100%" height="100%"
-            firstView="views.VWelcome">
+            firstView="welcome.views.VWelcome">
     <fx:Script><![CDATA[
-        import views.VBody;
+        import body.views.VBody;
 
-        public function switchView():void {
+        import spark.components.View;
+
+        public function switchView(p_view:Class):void {
             trace("changing view...");
-            this.pushView(VBody);
+            this.pushView(p_view);
+        }
+
+        public function go_home():void {
+            trace("changing view...");
+            this.popToFirstView();
         }
         ]]></fx:Script>
 </s:ViewNavigator>

@@ -1,0 +1,26 @@
+/*
+ CITY UNIVERSITY OF HONG KONG. OFFICE OF THE CHIEF INFORMATION OFFICER
+ Copyright 2013. City University of Hong Kong. Office of the Chief Information Officer
+ All Rights Reserved.
+ */
+
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace vWelcome "welcome.views.*";
+@namespace vBody "body.views.*";
+@namespace vBodyB "bodyB.views.*";
+
+
+/* Skin mapping */
+vWelcome|VWelcome
+{
+    skinClass: ClassReference("welcome.skins.KWelcome");
+}
+vBody|VBody
+{
+    skinClass: ClassReference("body.skins.KBody");
+}
+vBodyB|VBodyB
+{
+    skinClass: ClassReference("bodyB.skins.KBodyB");
+}

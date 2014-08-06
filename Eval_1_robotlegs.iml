@@ -17,7 +17,9 @@
           </entries>
           <sdk name="4.12.1_13.0" />
         </dependencies>
-        <compiler-options />
+        <compiler-options>
+          <option name="additionalOptions" value="-advanced-telemetry" />
+        </compiler-options>
         <packaging-air-desktop />
         <packaging-android enabled="true" package-file-name="Main" />
         <packaging-ios package-file-name="Main" />

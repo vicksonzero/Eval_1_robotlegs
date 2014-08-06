@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+  Created by Lenovo on 21/7/2014.
+-->
+<s:Skin
+        xmlns:fx="http://ns.adobe.com/mxml/2009"
+        xmlns:s="library://ns.adobe.com/flex/spark"
+        height="100%" width="100%"
+        >
+    <fx:Metadata>
+        [HostComponent("welcome.views.VWelcome")]
+    </fx:Metadata>
+
+    <s:states>
+        <s:State name="normal"/>
+        <s:State name="disabled"/>
+    </s:states>
+    <s:HGroup horizontalCenter="0" verticalCenter="0">
+        <s:Button
+                id="start_button"
+                height="50"
+                label="start"
+                creationComplete="trace('sButton created')"
+                />
+        <s:Button
+                id="start_button_b"
+                height="50"
+                label="start B"
+                creationComplete="trace('sButton b created')"
+                />
+    </s:HGroup>
+
+
+
+</s:Skin>
