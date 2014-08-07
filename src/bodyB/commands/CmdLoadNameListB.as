@@ -13,7 +13,7 @@ public class CmdLoadNameListB extends Command{
     [Inject]
     public var _model:MBodyB;
 
-    [Embed(source="/data/list.json", mimeType="application/octet-stream")]
+    [Embed(source="/data/listb.json", mimeType="application/octet-stream")]
     public var name_list_json_class:Class;
 
     //private var
